@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=PDF Compress Utility
+Icon=icon-pdf-128
+Categories=Office;
+Terminal=true
+X-AppImage-Version=0.1.09

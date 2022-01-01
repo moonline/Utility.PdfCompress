@@ -1,3 +1,6 @@
 *.desktop
 *.AppImage
-*/**/.DirIcon
+AppDir
+appimage-builder-cache
+
+

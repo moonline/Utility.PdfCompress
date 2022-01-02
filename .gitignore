@@ -1,4 +1,3 @@
-*.desktop
 *.AppImage
 AppDir
 appimage-builder-cache

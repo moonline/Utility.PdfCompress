@@ -1,0 +1,9 @@
+
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=pdfcompress
+Icon=application-pdf
+Exec=sh -c '~/.local/bin/pdfcompress.AppImage'
+Categories=Office;
+Terminal=false

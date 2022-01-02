@@ -2,8 +2,7 @@
 
 A simple utility to compress PDF files, based on YAD and Ghostscript.
 
-![Application starter](./docs/screenshot-2.jpg)
-![Application interface](./docs/screenshot-1.jpg)
+![Application interface](./docs/main-screen.png)
 
 ## Installation
 
@@ -14,8 +13,32 @@ Download installation package of the [latest release](https://github.com/moonlin
 #### Create application launcher
 
 1. Copy AppImage file to `.local/bin/pdfcompress.AppImage` in your home directory.
-2. Make it executable `sudo chmod+x ~/.local/bin/pdfcompress.AppImage`.
-3. Copy the launcher `pdfcompress.desktop` to `.local/share/applications/` and the icon `icon-pdf-128.png` to `.local/share/icons/`.
+
+```sh
+cp pdfcompress-*.AppImage ~/.local/bin/pdfcompress.AppImage
+```
+
+2. Make it executable 
+
+```sh
+sudo chmod+x ~/.local/bin/pdfcompress.AppImageS
+```
+
+3. Copy the launcher `pdfcompress.desktop` to `.local/share/applications/`.
+
+```sh
+cp pdfcompress.desktop ~/.local/share/applications/
+```
+
+
+## Uninstall
+
+Remove appimage and launcher:
+
+```sh
+rm ~/.local/share/applications/pdfcompress.desktop
+rm ~/.local/bin/pdfcompress.AppImage
+```
 
 
 ## Development
@@ -39,6 +62,7 @@ pdfcompress.sh
 
 ### Build appimage on Ubuntu/Mint
 
-* 32bit: `appimage-builder --recipe appimage/appimage-i386.yml`
-* 64bit: `appimage-builder --recipe appimage/appimage-amd64.yml`
+```sh
+appimage-builder --recipe appimage/appimage-amd64.yml
+```
 

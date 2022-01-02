@@ -1,7 +1,7 @@
 #!/bin/bash
 
 iconpath=$(dirname "$0")"/icon-pdf-128.png"
-description="Compress PDF document by ghostscript
+description="Compress PDF documents by ghostscript
 
 Quality:
 ⦁ screen (screen-view-only quality, 72 dpi images)
@@ -25,4 +25,4 @@ fields=$(yad --form --title="Compress PDF document" \
 echo $fields
 IFS='|' read -a arguments <<< "${fields}"
 
-gs -sDEVICE=pdfwrite -dNOPAUSE -dBATCH "-dPDFSETTINGS=/${arguments[0]}" "-sOutputFile=${arguments[2]}/${arguments[3]}" "${arguments[1]}" && echo "Converted ${arguments[1]} to ${arguments[2]}/${arguments[3]}" && xdg-open "${arguments[2]}"
+ghostscript -sDEVICE=pdfwrite -dNOPAUSE -dBATCH "-dPDFSETTINGS=/${arguments[0]}" "-sOutputFile=${arguments[2]}/${arguments[3]}" "${arguments[1]}" && echo "Converted ${arguments[1]} to ${arguments[2]}/${arguments[3]}"; xdg-open "${arguments[2]}" &
